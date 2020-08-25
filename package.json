@@ -1,6 +1,6 @@
 {
   "name": "k-sword",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Javascript Library base on Typescript",
   "main": "lib/k-sword.umd.js",
   "module": "lib/k-sword.esm.js",
