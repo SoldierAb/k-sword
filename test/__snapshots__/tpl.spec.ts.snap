@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tpl unit string replace 1`] = `"my name is Jane,I'm 12 years old."`;

@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flat unit flat 2 depth 1`] = `
+Array [
+  1,
+  2,
+  3,
+  Array [
+    4,
+  ],
+]
+`;
+
+exports[`flat unit flat Infinity depth 1`] = `
+Array [
+  1,
+  2,
+  3,
+  4,
+]
+`;
+
+exports[`flat unit 去扁平化，默认depth = 1 1`] = `
+Array [
+  1,
+  2,
+  Array [
+    3,
+  ],
+  Array [
+    Array [
+      Array [
+        4,
+      ],
+    ],
+  ],
+]
+`;

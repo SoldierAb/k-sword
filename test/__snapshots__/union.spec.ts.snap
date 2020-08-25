@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`union unit 单个参数 1`] = `
+Array [
+  1,
+]
+`;
+
+exports[`union unit 多个参数 1`] = `
+Array [
+  1,
+]
+`;
+
+exports[`union unit 无参数 1`] = `Array []`;

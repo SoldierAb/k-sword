@@ -1,0 +1,87 @@
+{
+  "name": "k-sword",
+  "version": "1.0.1",
+  "description": "Javascript Library base on Typescript",
+  "main": "lib/k-sword.umd.js",
+  "module": "lib/k-sword.esm.js",
+  "types": "src/index.d.ts",
+  "scripts": {
+    "lint": "eslint src --fix",
+    "dev": "rollup -w -c --environment FORMAT:esm",
+    "dev:doc": "vuepress dev docs",
+    "build:esm": "rollup -c --environment FORMAT:esm",
+    "build:umd": "rollup -c --environment FORMAT:umd",
+    "build:min": "rollup -c --environment FORMAT:min",
+    "build:doc": "vuepress build docs",
+    "build": "rimraf lib/* && run-p build:esm build:umd build:min build:doc",
+    "test": "jest --coverage",
+    "release": "standard-version",
+    "commit": "git add . && git-cz",
+    "postinstall": "node scripts/post-install || echo \"ignore\""
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*./src/**/*.{js,ts,json,md}": [
+      "prettier --write",
+      "npm run lint"
+    ]
+  },
+  "author": "cgj",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-decorators": "^7.10.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "@rollup/plugin-commonjs": "^14.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^8.4.0",
+    "@rollup/plugin-typescript": "^5.0.2",
+    "@types/jest": "^26.0.7",
+    "@types/node": "^14.0.27",
+    "@typescript-eslint/eslint-plugin": "^3.7.1",
+    "@typescript-eslint/parser": "^3.7.1",
+    "commitizen": "^4.1.2",
+    "cz-conventional-changelog": "^3.2.0",
+    "eslint": "^7.5.0",
+    "git-cz": "^4.7.0",
+    "husky": "^4.2.5",
+    "jest": "^26.1.0",
+    "lint-staged": "^10.2.11",
+    "lodash-es": "^4.17.15",
+    "lodash.merge": "^4.6.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.23.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-uglify": "^6.0.4",
+    "standard-version": "^9.0.0",
+    "ts-jest": "^26.1.3",
+    "tslib": "^2.0.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-config-standard": "^9.0.0",
+    "tslint-config-standard-plus": "^2.3.0",
+    "typescript": "^3.9.7",
+    "util": "^0.12.3",
+    "vuepress": "^1.5.3"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "chalk": "^4.1.0",
+    "core-js": "^3.6.5",
+    "node-emoji": "^1.10.0",
+    "rollup-plugin-node-polyfills": "^0.2.1"
+  }
+}

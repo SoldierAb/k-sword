@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`type unit get Array 1`] = `"Array"`;
+
+exports[`type unit get Function 1`] = `"Function"`;
+
+exports[`type unit get Number 1`] = `"Number"`;
+
+exports[`type unit get String 1`] = `"String"`;
+
+exports[`type unit get Symbol 1`] = `"Symbol"`;
+
+exports[`type unit get Undefined 1`] = `"Undefined"`;
