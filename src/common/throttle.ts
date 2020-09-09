@@ -1,5 +1,7 @@
-import { Procedure } from '../../index'
+export type Procedure = (...args:any[])=>void
+
 import {isFunction} from './isFunction'
+
 
 export function throttle<T extends Procedure>(
   fn:T,

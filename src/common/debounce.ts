@@ -1,5 +1,8 @@
 import {isFunction} from './isFunction'
-import { Procedure } from '../../index'
+
+
+export type Procedure = (...args:any[])=>void
+
 
 /**
  *

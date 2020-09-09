@@ -6,8 +6,8 @@
  * @param {number} [limit=6]
  * @returns {Promise<any>}
  */
+export type iterratorFn = (...arg:any[])=>Promise<any>
 
-import {iterratorFn } from '../../index'
 
 export async function parallel(
   params: any[],

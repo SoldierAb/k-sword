@@ -1,5 +1,17 @@
-import {UploadOptions} from '../../index'
+export type Procedure = (...args:any[])=>void
 
+export interface UploadOptions {
+  file: File
+  action: string
+  headers?: any
+  data?: any
+  withCredentials?: boolean
+  filename?: string
+  method?:string
+  onProgress: Procedure
+  onSuccess: Procedure
+  onError: Procedure
+}
 // extends Error
 export class UploadError extends Error {
   status?: number

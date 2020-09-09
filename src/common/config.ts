@@ -3,13 +3,13 @@ export interface configProvider{
 }
 
 let inited = false
+
 export class Config{
 
   [key:string]:any
 
   constructor(opt:configProvider = {}){
     this.config = opt;
-    this.inited = false
   }
 
   init(conf:configProvider):void{
