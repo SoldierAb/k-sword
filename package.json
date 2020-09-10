@@ -2,8 +2,7 @@
   "name": "k-sword",
   "version": "1.0.3",
   "description": "Javascript Library base on Typescript",
-  "main": "lib/k-sword.umd.js",
-  "module": "lib/k-sword.esm.js",
+  "main": "lib/k-sword.umd.min.js",
   "types": "src/index.d.ts",
   "scripts": {
     "dev": "rollup -w -c --environment FORMAT:esm",

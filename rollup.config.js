@@ -27,6 +27,6 @@ module.exports = {
     name: exposeName,
     format: 'umd',
     sourcemap:false,
-    file: path.resolve(__dirname, pkg.main.replace(/(.\w+)$/, '.min$1')),
+    file: path.resolve(__dirname, pkg.main),
   }
 }
